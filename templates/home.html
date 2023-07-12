@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Diabetes Prediction</title>
+<style>
+body {
+  font-family: system-ui;
+  background: #3c3d2c;
+  color: white;
+  text-align: center;
+}
+.container{
+			background-color:#5d1aa1;
+			padding:5px 20px 15px 20px;
+			border:1px solid lightgray;
+			border-radius:4px;
+		}
+</style>
+</head>
+<body>
+<center>
+<div class="container">
+<h1>Welcome to PrediabetesAlert!</h1>
+<form action="/pred" method="post">
+<input type="number"step="any" name="pr" placeholder="Enter no of Pragnancies" min="0" max="20" style="width: 25em" required/>
+<br><br>
+<input type="number"step="any" name="gl" placeholder="Enter your Glucose" min="1" max="500" style="width: 25em" required/>
+<br><br>
+<input type="number"step="any" name="bp" placeholder="Enter your BloodPressure" min="1" max="100" style="width: 25em" required/>
+<br><br>
+<input type="number"step="any" name="st" placeholder="Enter your SkinThickness" min="1" max="70" style="width: 25em" required/>
+<br><br>
+<input type="number"step="any" name="ins" placeholder="Enter your Insulin" min="1" max="500" style="width: 25em" required/>
+<br><br>
+<input type="number"step="any" name="bmi" placeholder="Enter your BMI" min="1" max="60" style="width: 25em" required/>
+<br><br>
+<input type="number"step="any" name="dp" placeholder="Enter your Diabetes Pedigree Function" min="0" max="1" style="width: 25em" required/>
+<br><br>
+<input type="number"step="any" name="age" placeholder="Enter your Age" min="1" max="100" style="width: 25em" required/>
+<br><br>
+<br><br>
+<input type="submit" value="Predict"/>
+</form>
+</div>
+</center>
+<center>
+	{{msg}}
+	</center>
+</body>
+</html>
